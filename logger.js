@@ -3,8 +3,10 @@ const winston = require('winston');
 const logger = (level = 'debug') => (
   new winston.Logger({
     transports: [
-      level,
-      timestamp: () => (new Date()).toISOString()
+      new winston.transports.Console({
+        level: level,
+        timestamp: () => (new Date()).toISOString()
+      })
     ]
   })
 );
