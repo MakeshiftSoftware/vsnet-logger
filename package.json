@@ -1,7 +1,21 @@
 {
   "name": "vsnet-logger",
   "version": "1.0.0",
+  "author": "taapesh",
+  "private": true,
+  "repository": "https://github.com/MakeshiftSoftware/vsnet-logger",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/**",
+    "clean": "rm -rf node_modules && rm -f yarn.lock && yarn cache clean && yarn",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1"
   }
 }
